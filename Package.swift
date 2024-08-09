@@ -4,13 +4,14 @@ import PackageDescription
 
 let package = Package(
     name: "TensorFlowLiteSwift",
+	platforms: [.iOS(.v15)],
     products: [
         .library(
             name: "TensorFlowLiteSwift",
             targets: ["TensorFlowLite"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/kewlbear/TensorFlowLiteC.git", .branch("master")),
+        .package(url: "https://github.com/Igor-Khomich/TensorFlowLiteC.git", .branch("master")),
     ],
     targets: [
         .target(
